@@ -1,8 +1,14 @@
-# React + Vite
+# headspace `frontend`
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## about this file
+the purpose of this file to document my work on building my first fullstack webapp (this file focuses on the frontend)
 
-Currently, two official plugins are available:
+## project details
+- the frontend of the project utilizes reactjs and possibly tailwind.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## what did i do?
+- setup reactjs with vite
+    - create new project by running `npm create vite@latest --template .`
+    - select react framework & javascript
+    - install dependencies `npm install`
+    - run project `npm run dev`
