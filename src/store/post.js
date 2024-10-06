@@ -17,6 +17,21 @@ const usePostStore = create((set) => ({
         const data = await res.json();
         set((state) => ({ posts: [...state.posts, data.data] }));
         return { success: true, message: "post created successfully!"};
+    },
+    fetchPosts: async () => {
+        const res = await fetch("/api/posts");
+        const data = await res.json();
+        set({ posts: data.data })
+    },
+    deletePost: async (pid) => {
+        const res = await fetch(`/api/posts/${pid}`, {
+            method: "DELETE"
+        });
+        const data = await res.json();
+        if (!data.success) {
+            return { return: false, message: data.message };
+        }
+        set(state => ({ posts: state.posts.filter(post => post._id !== pid) }));
     }
 }));
 
