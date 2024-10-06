@@ -25,4 +25,5 @@ the purpose of this file to document my work on building my first fullstack weba
     - [4](https://www.pinterest.com/pin/89157267625776679/)
 
 ## reads
-- []
+- [React Router: The Beginners Guide](https://ibaslogic.com/routing-with-react-router/)
+- 
