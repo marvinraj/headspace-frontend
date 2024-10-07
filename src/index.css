@@ -19,8 +19,10 @@
 
 /* landing page */
 .home{
+    height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .landing-welcome{
@@ -65,27 +67,6 @@
     color: var(--background-color);
 }
 
-.new-post{
-    position: sticky;
-    bottom: 20px;
-    right: 20px;
-    font-size: 16px;
-    font-weight: 600;
-    padding: 10px 20px;
-    border-radius: 30px;
-    border: 3px solid var(--highlight-color);
-    background-color: var(--highlight-color);
-    color: var(--background-color);
-    text-align: center;
-    width: 60px;
-    align-self: flex-end;
-}
-.new-post:hover{
-    border: 3px solid var(--highlight-color);
-    background-color: var(--background-color);
-    color: var(--highlight-color);
-}
-
 /* top navbar */
 .top-nav{
     display: flex;
@@ -112,11 +93,11 @@
 .thoughts{
     display: flex;
     margin: 0 auto;
-    width: 650px;
+    width: 580px;
     justify-content: space-between;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding: 5px 5px 35px 5px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 10px 10px 35px 10px;
     border-bottom: 15px solid #201a54;
 }
 
@@ -165,4 +146,25 @@
     height: 100px;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.new-post{
+    position: sticky;
+    bottom: 20px;
+    margin-right: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 3px solid var(--highlight-color);
+    background-color: var(--highlight-color);
+    color: var(--background-color);
+    text-align: center;
+    width: 60px;
+    align-self: flex-end;
+}
+.new-post:hover{
+    border: 3px solid var(--highlight-color);
+    background-color: var(--background-color);
+    color: var(--highlight-color);
 }

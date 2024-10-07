@@ -16,10 +16,12 @@ const HomePage = () => {
 
     return (
         <section className='home'>
-            <TopNavbar/>
-            {posts.map((post) => (
-                <Post key={post._id} post={post}/>
-            ))}
+            <div className="test">
+                <TopNavbar/>
+                {posts.map((post) => (
+                    <Post key={post._id} post={post}/>
+                ))}
+            </div>
             <Link to="/create" className='new-post'>+</Link>
         </section>
     )
