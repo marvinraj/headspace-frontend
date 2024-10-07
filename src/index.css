@@ -59,3 +59,83 @@
     background-color: var(--highlight-color);
     color: var(--background-color);
 }
+
+/* top navbar */
+.top-nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    align-items: center;
+}
+
+.logo-home{
+    color: var(--highlight-color);
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.nav-links{
+    display: flex;
+    font-size: 16px;
+    font-weight: 600;
+    gap: 20px;
+}
+
+/* post */
+.thoughts{
+    display: flex;
+    margin: 0 auto;
+    width: 650px;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 5px 5px 35px 5px;
+    border-bottom: 15px solid #201a54;
+}
+
+.content-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.thoughts h3{
+    font-size: 18px;
+}
+
+.buttons{
+    margin-top: auto;
+}
+
+.buttons button:nth-child(1){
+    color: var(--highlight-color);
+}
+.buttons button:nth-child(1):hover {
+    border-color: aliceblue;
+    color: aliceblue;
+}
+.buttons button:nth-child(2){
+    color: var(--background-color);
+    background-color: var(--highlight-color);
+}
+.buttons button:nth-child(2):hover {
+    border-color: aliceblue;
+    color: aliceblue;
+}
+
+.content-container button{
+    width: 60px;
+    height: 25px;
+    margin-right: 5px;
+    border: 1px solid var(--highlight-color);
+    border-radius: 10px;
+    font-size: 10px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 600;
+}
+.thoughts img{
+    width: 180px;
+    height: 100px;
+    border-radius: 10px;
+}

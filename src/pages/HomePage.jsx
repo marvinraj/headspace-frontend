@@ -6,7 +6,7 @@ import usePostStore from '../store/post';
 const HomePage = () => {
 
     const { fetchPosts, posts } = usePostStore();
-
+    
     useEffect(() => {
         fetchPosts();
     }, [fetchPosts]);

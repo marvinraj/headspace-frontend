@@ -12,14 +12,18 @@ const Post = ({post}) => {
     }
 
     return (
-        <main>
-            <h3>
-                {post.thoughts}
-            </h3>
+        <section className='thoughts'>
+            <div className="content-container">
+                <h3>
+                    {post.thoughts}
+                </h3>
+                <div className="buttons">
+                    <button onClick={() => handleDeletePost(post._id)}>Delete</button>
+                    <button>Edit</button>
+                </div>
+            </div>
             <img src={post.image} alt="random alt" />
-            <button onClick={() => handleDeletePost(post._id)}>delete</button>
-            <button>edit</button>
-        </main>
+        </section>
     )
 }
 
