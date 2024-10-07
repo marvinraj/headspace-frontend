@@ -18,7 +18,7 @@ const Post = ({post}) => {
                     {post.thoughts}
                 </h3>
                 <h5>
-                    <span>feeling:</span> {post.emotion}
+                    <span>mood:</span> {post.emotion}
                 </h5>
                 <div className="buttons">
                     <button onClick={() => handleDeletePost(post._id)}>Delete</button>
