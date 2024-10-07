@@ -3,7 +3,7 @@
     --secondary-font: "Indie Flower", cursive;
     --primary-color: #fff;
     --background-color: #221b61;
-    --highlight-color: #FF204E;
+    --highlight-color: #fa3e63;
 }
 
 * {
@@ -53,4 +53,9 @@
     padding: 10px 20px;
     border-radius: 10px;
     color: var(--highlight-color);
+}
+
+.login:hover{
+    background-color: var(--highlight-color);
+    color: var(--background-color);
 }
