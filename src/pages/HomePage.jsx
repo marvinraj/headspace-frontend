@@ -16,7 +16,7 @@ const HomePage = () => {
 
     return (
         <section className='home'>
-            <div className="test">
+            <div>
                 <TopNavbar/>
                 {posts.map((post) => (
                     <Post key={post._id} post={post}/>
