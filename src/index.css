@@ -18,6 +18,11 @@
 }
 
 /* landing page */
+.home{
+    display: flex;
+    flex-direction: column;
+}
+
 .landing-welcome{
     position: absolute;
     top: 50%;
@@ -58,6 +63,27 @@
 .login:hover{
     background-color: var(--highlight-color);
     color: var(--background-color);
+}
+
+.new-post{
+    position: sticky;
+    bottom: 20px;
+    right: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 3px solid var(--highlight-color);
+    background-color: var(--highlight-color);
+    color: var(--background-color);
+    text-align: center;
+    width: 60px;
+    align-self: flex-end;
+}
+.new-post:hover{
+    border: 3px solid var(--primary-color);
+    background-color: var(--background-color);
+    color: var(--primary-color);
 }
 
 /* top navbar */

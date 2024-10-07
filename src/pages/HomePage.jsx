@@ -15,13 +15,13 @@ const HomePage = () => {
     console.log("posts: ", posts)
 
     return (
-        <>
+        <section className='home'>
             <TopNavbar/>
             {posts.map((post) => (
                 <Post key={post._id} post={post}/>
             ))}
-            <Link to="/create" className='new-post'>new thoughts</Link>
-        </>
+            <Link to="/create" className='new-post'>+</Link>
+        </section>
     )
 }
 
