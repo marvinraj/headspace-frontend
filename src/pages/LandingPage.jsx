@@ -3,10 +3,10 @@ import BottomNavbar from '../components/BottomNavbar'
 
 const LandingPage = () => {
   return (
-    <>
-      <h3 className='landing-welcome'>so, what's on your mind?</h3>
+    <main className='landing-container'>
+      <h3 className='landing-welcome'>what's on your mind. anything.</h3>
       <BottomNavbar/>
-    </>
+    </main>
   )
 }
 

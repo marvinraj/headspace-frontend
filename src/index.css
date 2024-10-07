@@ -1,0 +1,56 @@
+:root{
+    --primary-font: "Roboto", sans-serif;
+    --secondary-font: "Indie Flower", cursive;
+    --primary-color: #fff;
+    --background-color: #221b61;
+    --highlight-color: #FF204E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    font-family: var(--primary-font);
+}
+
+/* landing page */
+.landing-welcome{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    color: var(--highlight-color);
+}
+
+/* bottom nav */
+.bottom-nav{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 25px;
+}
+
+.bottom-nav .logo{
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--highlight-color);
+}
+
+.bottom-nav .login{
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid var(--highlight-color);
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: var(--highlight-color);
+}
