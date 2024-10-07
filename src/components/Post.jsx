@@ -12,7 +12,7 @@ const Post = ({post}) => {
     }
 
     return (
-        <section className='thoughts'>
+        <div className='thoughts'>
             <div className="content-container">
                 <h3>
                     {post.thoughts}
@@ -23,7 +23,7 @@ const Post = ({post}) => {
                 </div>
             </div>
             <img src={post.image} alt="random alt" />
-        </section>
+        </div>
     )
 }
 
