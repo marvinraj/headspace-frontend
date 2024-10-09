@@ -3,14 +3,17 @@ import TopNavbar from '../components/TopNavbar'
 import usePostStore from '../store/post';
 
 const CreatePage = () => {
+    // state to manage new post data
     const [newPost, setNewPost] = useState({
         thoughts: "",
         emotion: "",
         image: ""
     });
 
+    // destructure createPost method from usePostStore hook
     const { createPost } = usePostStore();
 
+    // handle creating a new post
     const handleAddPost = async() => {
         const { success, message } = await createPost(newPost);
         console.log("success: ", success);
@@ -26,7 +29,7 @@ const CreatePage = () => {
             <div className="create-card">
                 <h3>what's on your mind?</h3>
                 <div className="create-inputs">
-                    <input type="text" placeholder='your thoughts..' name='thoughts' value={newPost.name} 
+                    <input type="text" placeholder='your thoughts..' name='thoughts' value={newPost.thoughts} 
                         onChange={(e) => setNewPost({ ...newPost, thoughts: e.target.value })}/>
                     <input type="text" placeholder='emotion' name='emotion' value={newPost.emotion}
                         onChange={(e) => setNewPost({ ...newPost, emotion: e.target.value })} />

@@ -3,9 +3,12 @@ import usePostStore from '../store/post';
 
 const Post = ({post}) => {
 
+    // destructure deletePost function from the usePostStore hook
     const {deletePost} = usePostStore();
 
+    // handle deleting the post
     const handleDeletePost = async (pid) => {
+        // calls deletePost function with post id
         const {success, message} = await deletePost(pid);
         console.log("success: ", success);
         console.log("message: ", message);

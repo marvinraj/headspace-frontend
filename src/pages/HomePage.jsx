@@ -6,8 +6,10 @@ import { Link } from 'react-router-dom'
 
 const HomePage = () => {
 
+    // destructure usePostStore hook
     const { fetchPosts, posts } = usePostStore();
 
+    // fetches posts data when the component mounts
     useEffect(() => {
         fetchPosts();
     }, [fetchPosts]);
@@ -18,6 +20,7 @@ const HomePage = () => {
         <section className='home'>
             <div>
                 <TopNavbar/>
+                {/* use .map() to map out every post from the posts array */}
                 {posts.map((post) => (
                     <Post key={post._id} post={post}/>
                 ))}
