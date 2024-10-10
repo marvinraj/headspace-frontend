@@ -7,7 +7,7 @@
     --secondary-font: "Indie Flower", cursive;
     --primary-color: #fff;
     --background-color: #201a59;
-    --highlight-color: #fa3e63;
+    --highlight-color: #df3658;
     --shade-color: #cecece;
 }
 
@@ -59,10 +59,10 @@
 }
 
 .bottom-nav .login{
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     border: 2px solid var(--highlight-color);
-    padding: 10px 20px;
+    padding: 8px 20px;
     border-radius: 10px;
     color: var(--highlight-color);
 }

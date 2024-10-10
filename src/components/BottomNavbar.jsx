@@ -5,7 +5,7 @@ const BottomNavbar = () => {
   return (
     <header className='bottom-nav container'>
         <Link to="/home" className='logo'>headspace</Link>
-        <Link to="/home" className='login'>login</Link>
+        <Link to="/home" className='login'>view</Link>
     </header>
   )
 }
