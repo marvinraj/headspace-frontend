@@ -28,6 +28,10 @@ the purpose of this file to document my work on building my first fullstack weba
             - i wasnt really familiar with the entire concept of zustand, state, and state management, so i researched and read about them (links below)
             - first, i created a store in a file post.js in store folder with state and methods to alter the state
             - next, i binded the HomePage with the store
+        - the other methods are essentially the same as the fetch
+- created a modal to allow users to edit their thoughts
+    - for this to work i installed tailwind, saves time
+- now im left with adding the functionality for the edit feature + styling the create page
 
 
 ## inspo
@@ -49,3 +53,5 @@ the purpose of this file to document my work on building my first fullstack weba
 - [React State Management — using Zustand](https://medium.com/globant/react-state-management-b0c81e0cbbf3)
 - [zustand docs](https://zustand.docs.pmnd.rs/getting-started/introduction)
 - [A Simple Explanation of React.useEffect()](https://dmitripavlutin.com/react-useeffect-explanation/)
+- [helped with the edit thoughts modal](https://stackoverflow.com/questions/67482250/toggle-div-visibility-in-react-js)
+- [another one that helped with modal](https://www.youtube.com/watch?v=nwJK-jo91vA)
