@@ -27,16 +27,16 @@ const CreatePage = () => {
         <main>
             <TopNavbar/>
             <div className="create-card">
-                <h3>what's on your mind?</h3>
-                <div className="create-inputs">
-                    <input type="text" placeholder='your thoughts..' name='thoughts' value={newPost.thoughts} 
+                <h3 className='create-title mb-5'>what's on your mind?</h3>
+                <div className="create-inputs flex flex-col">
+                    <input className='p-4 my-1 mb-4' type="text" placeholder='your thoughts...' name='thoughts' value={newPost.thoughts} 
                         onChange={(e) => setNewPost({ ...newPost, thoughts: e.target.value })}/>
-                    <input type="text" placeholder='emotion' name='emotion' value={newPost.emotion}
+                    <input className='p-4 my-1 mb-4' type="text" placeholder='feeling...' name='emotion' value={newPost.emotion}
                         onChange={(e) => setNewPost({ ...newPost, emotion: e.target.value })} />
-                    <input type="text" placeholder='image' name='image' value={newPost.image}
+                    <input className='p-4 my-1 mb-4' type="text" placeholder='image url...' name='image' value={newPost.image}
                         onChange={(e) => setNewPost({ ...newPost, image: e.target.value })} />
                 </div>
-                <button onClick={handleAddPost}>Post</button>
+                <button className='btn-post text-sm font-bold py-2 px-6' onClick={handleAddPost}>Post</button>
             </div>
         </main>
   )
