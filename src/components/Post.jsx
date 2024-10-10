@@ -52,21 +52,24 @@ const Post = ({post}) => {
 
             {/* modal */}
             <div style={style} className='fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center'>
-                <div className='w-[600px] flex flex-col'>
-                    <div className='x-button place-self-end' onClick={() => toggleHiddenModal()}>
+                <div className='w-[600px] flex flex-col p-6'>
+                    <div className='cursor-pointer place-self-end' onClick={() => toggleHiddenModal()}>
                         X
                     </div>
-                    <div className='bg-white text-stone-950 p-2'>
-                        update thoughts
+                    <div className='modal-title text-white text-lg text-center'>
+                        Update Thoughts
                     </div>
-                    <div className="modal-content">
-                        <input type="text" placeholder='thoughts..' name='thoughts' value={updatedPost.thoughts} onChange={(e) => setUpdatedPost({ ...updatedPost, thoughts: e.target.value })} />
-                        <input type="text" placeholder='feeling..' name='emotion' value={updatedPost.emotion} onChange={(e) => setUpdatedPost({ ...updatedPost, emotion: e.target.value })} />
-                        <input type="text" placeholder='image..' name='image' value={updatedPost.image} onChange={(e) => setUpdatedPost({ ...updatedPost, image: e.target.value })} />
+                    <div className="modal-content flex flex-col justify-center">
+                        <h3 className='modal-input-title'>thoughts:</h3>
+                        <input className='input-modal p-2 my-1 mb-4' type="text" placeholder='thoughts..' name='thoughts' value={updatedPost.thoughts} onChange={(e) => setUpdatedPost({ ...updatedPost, thoughts: e.target.value })} />
+                        <h3 className='modal-input-title'>feeling:</h3>
+                        <input className='input-modal p-2 my-1 mb-4' type="text" placeholder='feeling..' name='emotion' value={updatedPost.emotion} onChange={(e) => setUpdatedPost({ ...updatedPost, emotion: e.target.value })} />
+                        <h3 className='modal-input-title'>image url:</h3>
+                        <input className='input-modal p-2 my-1 mb-4' type="text" placeholder='image..' name='image' value={updatedPost.image} onChange={(e) => setUpdatedPost({ ...updatedPost, image: e.target.value })} />
                     </div>
-                    <div className="modal-footer">
-                        <button onClick={() => { handleUpdatePost(post._id, updatedPost); toggleHiddenModal() }}>update</button>
-                        <button onClick={() => toggleHiddenModal()}>cancel</button>
+                    <div className="modal-footer my-6 flex self-end">
+                        <button className='btn-update text-sm font-bold py-2 px-4 mr-2' onClick={() => { handleUpdatePost(post._id, updatedPost); toggleHiddenModal() }}>Update</button>
+                        <button className='btn-cancel text-sm font-bold py-2 px-4' onClick={() => toggleHiddenModal()}>Cancel</button>
                     </div>
                 </div>
             </div>

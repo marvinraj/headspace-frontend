@@ -165,10 +165,6 @@
     cursor: pointer;
 }
 
-.x-button{
-    cursor: pointer;
-}
-
 .new-post{
     position: sticky;
     bottom: 20px;
@@ -187,5 +183,44 @@
 .new-post:hover{
     border: 3px solid var(--highlight-color);
     background-color: var(--background-color);
+    color: var(--highlight-color);
+}
+
+/* modal */
+.modal-title{
+    font-size: 28px;
+    margin-bottom: 35px;
+    font-weight: 600;
+}
+
+.modal-input-title{
+    font-style: italic;
+    color: var(--highlight-color);
+    font-weight: 600;
+}
+
+.input-modal{
+    background-color: #171342;
+    color: var(--shade-color);
+}
+
+.btn-update{
+    background-color: var(--highlight-color);
+    border: 0.5px solid var(--highlight-color);
+    border-radius: 10px;
+    color: var(--background-color);
+}
+.btn-update:hover{
+    border: 0.5px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-cancel{
+    background-color: var(--background-color);
+    border: 0.5px solid var(--primary-color);
+    border-radius: 10px;
+}
+.btn-cancel:hover{
+    border: 0.5px solid var(--highlight-color);
     color: var(--highlight-color);
 }
