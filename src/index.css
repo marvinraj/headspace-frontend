@@ -6,8 +6,9 @@
     --primary-font: "Roboto", sans-serif;
     --secondary-font: "Indie Flower", cursive;
     --primary-color: #fff;
-    --background-color: #221b61;
+    --background-color: #201a59;
     --highlight-color: #fa3e63;
+    --shade-color: #cecece;
 }
 
 * {
@@ -100,9 +101,8 @@
     width: 580px;
     justify-content: space-between;
     margin-top: 30px;
-    padding: 10px 10px 25px 10px;
-    border-bottom: 15px solid #201a54;
-    
+    padding: 10px 10px 20px 10px;
+    border-bottom: 15px solid #1b1648;
 }
 
 .content-container{
@@ -115,16 +115,16 @@
 }
 
 .thoughts h5{
-    padding-top: 15px;
+    padding-top: 5px;
     font-weight: 400;
     font-size: 12px;
-    color: #cecece;
+    color: var(--shade-color);
 }
 
 .thoughts h5 span{
     font-weight: 600;
     font-style: italic;
-    color: #cecece;
+    color: var(--shade-color);
 }
 
 .buttons{
@@ -177,7 +177,7 @@
     background-color: var(--highlight-color);
     color: var(--background-color);
     text-align: center;
-    width: 60px;
+    width: 55px;
     align-self: flex-end;
 }
 .new-post:hover{
