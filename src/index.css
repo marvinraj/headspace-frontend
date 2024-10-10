@@ -165,6 +165,10 @@
     cursor: pointer;
 }
 
+.x-button{
+    cursor: pointer;
+}
+
 .new-post{
     position: sticky;
     bottom: 20px;

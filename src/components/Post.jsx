@@ -6,6 +6,9 @@ const Post = ({post}) => {
     // state for the modal
     const [showModal, setShowModal] = useState({ isHidden: true })
 
+    // state for updated post
+    const [updatedPost, setUpdatedPost] = useState(post)
+
     // function to toggle view of modal
     function toggleHiddenModal() {
         setShowModal({ isHidden: !showModal.isHidden })
@@ -17,7 +20,7 @@ const Post = ({post}) => {
     // if showModal.isHidden is true, then visibility=hidden, if false then visibility=visible
 
     // destructure deletePost function from the usePostStore hook
-    const {deletePost} = usePostStore();
+    const {deletePost, updatePost} = usePostStore();
 
     // handle deleting the post
     const handleDeletePost = async (pid) => {
@@ -25,6 +28,10 @@ const Post = ({post}) => {
         const {success, message} = await deletePost(pid);
         console.log("success: ", success);
         console.log("message: ", message);
+    }
+
+    const handleUpdatePost = async (pid, updatedPost) => {
+        updatePost(pid, updatedPost);
     }
 
     return (
@@ -38,7 +45,7 @@ const Post = ({post}) => {
                 </h5>
                 <div className="buttons">
                     <button onClick={() => handleDeletePost(post._id)}>Delete</button>
-                    <button onClick={toggleHiddenModal}>Edit</button>
+                    <button onClick={() => toggleHiddenModal()}>Edit</button>
                 </div>
             </div>
             <img src={post.image} alt="random alt" />
@@ -46,20 +53,20 @@ const Post = ({post}) => {
             {/* modal */}
             <div style={style} className='fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center'>
                 <div className='w-[600px] flex flex-col'>
-                    <div className='place-self-end'>
+                    <div className='x-button place-self-end' onClick={() => toggleHiddenModal()}>
                         X
                     </div>
                     <div className='bg-white text-stone-950 p-2'>
                         update thoughts
                     </div>
                     <div className="modal-content">
-                        <input type="text" placeholder='thoughts..' />
-                        <input type="text" placeholder='feeling..' />
-                        <input type="text" placeholder='image..' />
+                        <input type="text" placeholder='thoughts..' name='thoughts' value={updatedPost.thoughts} onChange={(e) => setUpdatedPost({ ...updatedPost, thoughts: e.target.value })} />
+                        <input type="text" placeholder='feeling..' name='emotion' value={updatedPost.emotion} onChange={(e) => setUpdatedPost({ ...updatedPost, emotion: e.target.value })} />
+                        <input type="text" placeholder='image..' name='image' value={updatedPost.image} onChange={(e) => setUpdatedPost({ ...updatedPost, image: e.target.value })} />
                     </div>
                     <div className="modal-footer">
-                        <button>update</button>
-                        <button onClick={toggleHiddenModal}>cancel</button>
+                        <button onClick={() => { handleUpdatePost(post._id, updatedPost); toggleHiddenModal() }}>update</button>
+                        <button onClick={() => toggleHiddenModal()}>cancel</button>
                     </div>
                 </div>
             </div>

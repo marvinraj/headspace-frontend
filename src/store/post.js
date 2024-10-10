@@ -57,6 +57,27 @@ const usePostStore = create((set) => ({ // set here is used to modify the state 
         }
         // updates the posts state by filtering out the deleted post
         set(state => ({ posts: state.posts.filter(post => post._id !== pid) }));
+    },
+
+    // 5 - update a post
+    updatePost: async (pid, updatedPost) => {
+        // fetches data from "/api/posts/pid" endpoint with PUT method
+        const res = await fetch(`/api/posts/${pid}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(updatedPost)
+        });
+        // parse the response as json
+        const data = await res.json();
+        // check if deletion is unsuccessful
+        if (!data.success) {
+            return { return: false, message: data.message };
+        }
+        set(state => ({
+            posts: state.posts.map(post => post._id === pid ? data.data : post)
+        }));
     }
 }));
 
