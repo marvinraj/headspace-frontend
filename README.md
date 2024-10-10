@@ -31,7 +31,7 @@ the purpose of this file to document my work on building my first fullstack weba
         - the other methods are essentially the same as the fetch
 - created a modal to allow users to edit their thoughts
     - for this to work i installed tailwind, saves time
-- now im left with adding the functionality for the edit feature + styling the create page
+- now im left with adding the functionality for the edit feature + styling the create page + add in icons
 
 
 ## inspo
