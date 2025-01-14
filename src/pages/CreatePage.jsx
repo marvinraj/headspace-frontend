@@ -12,6 +12,7 @@ const CreatePage = () => {
 
     // destructure createPost method from usePostStore hook
     const { createPost } = usePostStore();
+    console.log("test");
 
     // handle creating a new post
     const handleAddPost = async() => {

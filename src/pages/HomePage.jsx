@@ -8,6 +8,7 @@ const HomePage = () => {
 
     // destructure usePostStore hook
     const { fetchPosts, posts } = usePostStore();
+    console.log("test");
 
     // fetches posts data when the component mounts
     useEffect(() => {
